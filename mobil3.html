@@ -1,0 +1,143 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unhar travel car</title>
+ 
+ <!-- My icon --> 
+   <script src="https://unpkg.com/feather-icons"></script>
+   <link rel="stylesheet" href="style.css">
+ </head>
+ <body> 
+ 
+ <!-- navbar start -->
+ <nav class="navbar">
+   <a href="index.html" class="navbar-logo">Unhar<span>travel</span>.</a>
+   
+   <div class="navbar-nav">
+     <a href="index.html">Home</a>
+     <a href="index.html">tentang kami</a>
+     <a href="index.html">pemesanan</a>
+     <a href="index.html">Kontak</a>
+   </div>
+   
+   <div class="navbar-extra">
+     <a href="#" id="Hamburger-menu"><i data-feather="menu"></i></a> 
+     
+   </div>
+   
+ </nav>
+<!-- navbar end -->
+
+ <!-- penyewaan -->
+<section class="sewa">
+  <h2> <span><center>MEDAN - PARAPAT / PARAPAT - MEDAN</center></span></h2><br>
+  <h3> <span><center> NEW AVANZA  </center></span></h3><br>
+  <div class="row">
+    <div class="sewa-img">
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="2avz.png" 
+      alt="Avanza">
+      <div class="content"><br>
+        
+        <h3> Spesifikasi </h3><br>
+       <p>Berikut ini adalah pilihan rute Medan ke Parapat maupun dari Parapat ke Medan pada travel kami. Pada rute ini kami menyediakan unit mobil New Avanza.
+         Adapun harga rute tersebut yaitu 85.000 per orang sesuai yang tercantum, berikut ini data yang disediakan untuk diisi oleh calon penumpang :
+       </p><br>
+       
+       <p>Jenis Transmisi & Fasilitas : Manual/Matic & Full AC dan Music <br>
+          kapasitas      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  : 7 orang <br>
+          Harga         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp; &nbsp;  : Rp.85.000 / Orang </p><br><br>
+       
+       
+       <!--pemessanan-->
+<section id="pemesanan" class="pemesanan">
+  <div class="data">
+    <table Border="0" height="80">
+  
+      <p>
+        Nama &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : <input type="text" id="nama">
+      </p><br>
+      
+      <p>
+        No Hp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : <input type="number" id="nohp">
+      </p><br>
+      
+      <p>
+        Alamat  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : <input type="text" id="alamat">
+      </p><br>
+      
+      <p>
+        Tujuan  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : <input type="text" id="tujuan">
+      </p><br>
+      
+      Tanggal  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  : <input type="date" id="date"><br><br>
+      
+        <tr>
+        <td> Jumlah Orang     &nbsp;  :</td>
+       <td> <input type="number" id="second"></td>
+        </tr>
+      
+      
+        <tr>
+          <td colspan="2"><center>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   <button onclick="add()">Total Biaya</button></center>
+            </td>
+        </tr>
+        
+        <tr>
+         <td> Jumlah (Rp)    &nbsp; &nbsp; &nbsp; :</td>
+         <td><input id="answer"></td>
+         </tr>
+       </table>
+      </section>
+      
+      <section id="metode" class="metode">
+        <div class="data">
+        <table Border="0" height="80">
+      <form>
+        <label for="metode_pembayaran">Metode Pembayaran &nbsp; :  &nbsp; </label>
+        <select id="metode_pembayaran" name="metode_pembayaran">
+          <option value="Transfer Bank (1060016046156 - Bank Mandiri &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; A/n UNHAR TRAVEL CAR )" >Transfer Bank</option>
+          <option value="Bayar Langsung" >Bayar Langsung</option>
+        </select>
+       
+      </form><br>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; <button onclick="submitdata()">Klik untuk pesan</button>
+    </p>
+  </section>
+     
+  
+  
+  
+  
+         
+         </table>
+    </div>
+    
+          
+          
+  <!-- feather-icons -->
+   <script>
+    function submitdata() {
+    var nama = document.getElementById("nama").value;
+    var nohp = document.getElementById("nohp").value;
+    var alamat = document.getElementById("alamat").value;
+    var tujuan = document.getElementById("tujuan").value;
+    var tanggal = document.getElementById("date").value;
+    var total = document.getElementById("answer").value;
+    var pembayaran = document.getElementById("metode_pembayaran").value;
+    
+    alert("Nama   : " + nama + "\nNo.HP  : " + nohp + "\nAlamat : "  + alamat + "\nTujuan : " + tujuan + "\nTanggal : " +tanggal + "\nTotal Bayar : " + total + "\nMetode Pembayaran : " + pembayaran);
+    alert("TERIMAKASIH " + nama +  " SUDAH MEMESAN TRAVEL PADA KAMI");
+  }
+
+      feather.replace()
+    </script>
+    
+ <!-- java script -->
+ <script src="script3.js"></script>
+ 
+ 
+ </body>
+ </html>
